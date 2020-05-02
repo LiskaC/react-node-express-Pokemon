@@ -1,0 +1,8 @@
+.button {
+  padding: 0px 30px;
+  offset-block-end: 10px;
+}
+
+.button:hover {
+  background-color: antiquewhite;
+}

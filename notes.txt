@@ -1,0 +1,9 @@
+
+is there a way to write all this spinning/loading just once? 
+have also tried to writing into components, not sure which way to go. 
+perhaps with set timeout?
+
+How can I rig up the nav bar? does it have to be links or possible with buttons?
+Really not happy with passing info across components or having them influence each other.
+
+how do I pass info from server to client?

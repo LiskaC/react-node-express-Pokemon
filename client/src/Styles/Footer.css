@@ -1,0 +1,8 @@
+.Footer {
+  display: flex;
+  flex-direction: row;
+  background: #fff0ca;
+  height: 30px;
+  /* margin is a bit of a patch solution ad hoc*/
+  margin-top: -30px; 
+};
