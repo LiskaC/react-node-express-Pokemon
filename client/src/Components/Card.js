@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
-import { Switch, Route, BrowserRouter } from "react-router-dom";
 
 import '../Styles/Card.css';
-import About from './About';
-import Search from './Search';
-import Compare from './Compare';
 import SpinningPokeball from './Pokeball';
 
 export default class Card extends Component {
@@ -31,13 +27,6 @@ export default class Card extends Component {
 
     return (
       <div className="display-card">
-        <BrowserRouter>
-          <Switch>
-            <Route path="/about" exact component={About} />
-            <Route path="/search" component={Search} />
-            <Route path="/compare" component={Compare} />
-          </Switch>
-        </BrowserRouter>
         {spinningLoad}
       </div >
     )

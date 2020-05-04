@@ -4,7 +4,7 @@ import '../Styles/Button.css';
 export default class Button extends Component {
   handleClick = (e) => {
     e.preventDefault();
-    alert("A CLICK HAPPENED! Now just to get this to do something useful")
+    this.props.onButtonClick();
     // get this to respond with appropriate Card content AND make pokeball appear
   }
 
