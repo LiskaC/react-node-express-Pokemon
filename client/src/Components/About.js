@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import SpinningPokeball from './Pokeball';
+import Card from './Card';
 
 export default class About extends Component {
   constructor(props) {
@@ -25,6 +26,7 @@ export default class About extends Component {
 
     return (
       <div className="card-contents">
+        <Card />
         <p>This is a website about Pokemon</p>
         {spinningLoad}
       </div>

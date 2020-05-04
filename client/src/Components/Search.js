@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import '../Styles/Button.css';
 
+import Card from './Card';
+
 export default class Search extends Component {
   render() {
     return (
       <div className="card-contents">
+        <Card />
         <p>Searching Searching Searching</p>
 
         <form>

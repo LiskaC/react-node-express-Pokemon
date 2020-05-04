@@ -2,5 +2,24 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  align-content: center;
   background-color: #fff0ca;
-};
+  height: 50px;
+}
+
+.link {
+background: red;
+margin: auto;
+padding: 10px;
+width: 80px;
+text-decoration: none;
+color: white;
+}
+
+.link:hover {
+  background: rgb(172, 1, 1);
+}
+
+.link:active {
+  background: rgb(119, 1, 1);
+}

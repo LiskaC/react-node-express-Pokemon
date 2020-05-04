@@ -22,7 +22,6 @@ function App() {
               <Route path="/search" component={Search} />
               <Route path="/compare" component={Compare} />
             </Switch>
-            <Card />
             <SpinningPokeball />
           </div>
         </BrowserRouter>

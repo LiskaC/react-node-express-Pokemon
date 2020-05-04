@@ -12,9 +12,9 @@ export default class Navbar extends Component {
   render() {
     return (
       <div className="Navbar">
-        <Link className="about-link" to="/about">About</Link>
-        <Link className="about-compare" to="/compare">Compare</Link>
-        <Link className="about-search" to="/search">Search</Link>
+        <Link className="link about-link" to="/about">About</Link>
+        <Link className="link compare-link" to="/compare">Compare</Link>
+        <Link className="link search-link" to="/search">Search</Link>
       </div>
     )
   }
