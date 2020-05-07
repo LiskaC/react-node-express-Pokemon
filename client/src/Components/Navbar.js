@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import '../Styles/Navbar.css';
 
 export default class Navbar extends Component {
-  toAbout = () => {
+  /*toAbout = () => {
     //this.props.history.push('/about');
     console.log('hellothere')
     console.log(this.props);
-  }
+  }*/
 
   render() {
     return (

@@ -28,6 +28,7 @@ export default class Card extends Component {
     return (
       <div className="display-card">
         {spinningLoad}
+        {this.props.cardText}
       </div >
     )
   }
