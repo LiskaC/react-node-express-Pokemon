@@ -34,7 +34,7 @@ let sorted = (num) => {
   let pokeSlice = somePokeDeets(num).slice(0);
   return pokeSlice.sort((a, b) => a.total - b.total);
 }
-console.log('Pokemon sorted by awesomeness:', sorted(5));
+console.log('Pokemon sorted by awesomeness:', sorted(6));
 
 
 //this finds the index of a Pokemon in the database, when its name is input as the string
