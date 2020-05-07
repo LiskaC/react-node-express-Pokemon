@@ -25,20 +25,20 @@ let allPokeDeets = (num) => { return nerds.resolve('Pokemon', num).asArray(); };
 const somePokeDeets = (num) => {
   let result = nerds.resolve('Pokemon', num).include(['name', 'type', 'total']).asArray();
   return result;
- };
+};
 //console.log(somePokeDeets(1));
 
 
 // this sorts the returned array for any number of random Pokemon by AWESOMENESS
 let sorted = (num) => {
   let pokeSlice = somePokeDeets(num).slice(0);
-  return pokeSlice.sort((a,b) => a.total - b.total);
+  return pokeSlice.sort((a, b) => a.total - b.total);
 }
 console.log('Pokemon sorted by awesomeness:', sorted(5));
 
 
 //this finds the index of a Pokemon in the database, when its name is input as the string
-let oneMonIndex = (str) => { 
+let oneMonIndex = (str) => {
   //this is to have a static array of objects to work on 
   // (otherwise the DB keeps scrambling responses and i returns a different pokemon each time it's called)
   let fullPokeSlice = allPokeDeets(151).slice(0);
@@ -46,7 +46,7 @@ let oneMonIndex = (str) => {
   let pokeObject = fullPokeSlice[i];
 
   console.log('These are the stats for ' + str + ':');
-   return pokeObject;
+  return pokeObject;
 };
 
 console.log(oneMonIndex('Ponyta'));

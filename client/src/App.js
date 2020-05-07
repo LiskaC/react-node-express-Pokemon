@@ -6,7 +6,6 @@ import About from './Components/About';
 import Search from './Components/Search';
 import Compare from './Components/Compare';
 import Navbar from './Components/Navbar';
-import Card from './Components/Card';
 import Footer from './Components/Footer';
 import SpinningPokeball from './Components/Pokeball';
 
