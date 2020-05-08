@@ -5,15 +5,14 @@ import Card from './Card';
 
 const message =
   <div className="card-contents">
-    <p>Searching Searching Searching</p>
+    <p>Show all stats for:</p>
 
     <form>
-      <label>Get me a random group of
-  <input type="number" name="number-of-pokemon"></input>
-    1st Gen Pokemon, sorted in order of AWESOMENESS
-  </label>
+      <label>
+        <input type="text" name="name-of-pokemon" placeholder="Pokemon Name"></input>
+      </label>
       <div className="button">
-        <input type="submit" value="GO!" />
+        <input type="submit" value={`I choose you!`} />
       </div>
     </form>
   </div>

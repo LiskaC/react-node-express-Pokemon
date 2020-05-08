@@ -29,6 +29,7 @@ export default class Card extends Component {
       <div className="display-card">
         {spinningLoad}
         {this.props.cardText}
+        {this.props.resultsTable}
       </div >
     )
   }
