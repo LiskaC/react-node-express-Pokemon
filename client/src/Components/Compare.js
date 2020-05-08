@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Card from './Card';
 import ComparisonResultsTable from './ResultsTable';
 
-
+//could not declare these variables inside the class Component - why?
 const message = <div className="compare-text">
   <p>Get me a random group of</p>
 
@@ -24,7 +24,7 @@ export default class Compare extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      searchTerm: ""
+      pokemonNumber: []
     }
   };
 
