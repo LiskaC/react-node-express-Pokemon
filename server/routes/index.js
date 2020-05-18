@@ -1,9 +1,12 @@
 const express = require("express");
 const app = express();
 const port = process.env.PORT || 5000;
+const { sorted, oneMonIndex } = require("../simplest-app");
 
 app.listen(port, () => console.log(`listening on port ${port}`));
 
 app.get('/express_backend', (req, res) => {
-  res.send({ express: 'EXPRESS BACKEND IS CONNECTED TO REACT' })
+  const data = sorted(5);
+
+  res.send(data)
 });
