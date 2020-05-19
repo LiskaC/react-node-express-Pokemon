@@ -25,17 +25,28 @@ export default class Compare extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      pokemonNumber: 0
+      pokemonNumber: 0,
+      searchResults: []
     }
   };
 
   handleOnSubmit = async (e) => {
     e.preventDefault();
-    console.log(e);
 
     //use state to pass in value to function
     const response = await fetch("/express_backend");
-    console.log(response.json());
+
+    response.json()
+      .then(res => {
+        this.setState({
+          searchResults: res
+        })
+      })
+      .catch((err => console.log(err)));
+    // currently the state is only changing within the .then function,
+    // why isn't this change in state being remembered?
+    console.log(this.state.searchResults)
+
   };
 
   handleUserInput = (e) => {
