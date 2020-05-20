@@ -10,3 +10,14 @@ app.get('/express_backend', (req, res) => {
 
   res.send(data)
 });
+
+/*
+in response to frontend input request
+
+app.get('/express_backend/:searchNumber, (req, res, next) => {
+  const response = sorted(req.params.searchNumber);
+
+  res.send(response)
+})
+
+*/
