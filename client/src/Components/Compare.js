@@ -33,7 +33,16 @@ export default class Compare extends Component {
   handleOnSubmit = async (e) => {
     e.preventDefault();
 
-    //use state to pass in value to function
+    //use state to pass pokemon number into URL
+    /* 
+    const searchNumber = this.state.pokemonNumber;
+    const input response = await fetch("/express_backend/${searchNumber}")
+    write associated route on backend
+    */
+
+    //then response.json() etc as below
+
+    // returns static array of 5
     const response = await fetch("/express_backend");
 
     response.json()
@@ -42,7 +51,8 @@ export default class Compare extends Component {
           searchResults: res
         })
       })
-      .catch((err => console.log(err)));
+      .catch((err => console.log(err
+      )));
     // currently the state is only changing within the .then function,
     // why isn't this change in state being remembered?
     console.log(this.state.searchResults)
