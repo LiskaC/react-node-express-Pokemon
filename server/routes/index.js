@@ -5,19 +5,19 @@ const { sorted, oneMonIndex } = require("../simplest-app");
 
 app.listen(port, () => console.log(`listening on port ${port}`));
 
-app.get('/express_backend', (req, res) => {
+/*app.get('/express_backend', (req, res) => {
   const data = sorted(5);
 
   res.send(data)
 });
+*/
 
-/*
-in response to frontend input request
+//in response to frontend input request
 
-app.get('/express_backend/:searchNumber, (req, res, next) => {
+app.get('/express_backend/:searchNumber', (req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
   const response = sorted(req.params.searchNumber);
 
   res.send(response)
 })
 
-*/
