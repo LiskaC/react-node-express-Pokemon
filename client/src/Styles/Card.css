@@ -2,15 +2,10 @@
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  left: 0;
-  right: 0;
-  margin-top: auto;
+  margin-top: 30px;
   margin-bottom: auto;
-  top: 0;
-  bottom: 0;
-  text-align: center;
+  padding: 20px;
   width: 60%;
-  height: 70%;
   border-radius: 2%;
   background-color: rgb(255, 255, 206);
 }

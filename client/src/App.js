@@ -12,19 +12,17 @@ import SpinningPokeball from './Components/Pokeball';
 function App() {
   return (
     <div className="App">
-      <div className="app-content">
-        <BrowserRouter>
-          <Navbar />
-          <div className="app-body">
-            <Switch>
-              <Route path="/about" exact component={About} />
-              <Route path="/compare" component={Compare} />
-              <Route path="/search" component={Search} />
-            </Switch>
-            <SpinningPokeball />
-          </div>
-        </BrowserRouter>
-      </div>
+      <BrowserRouter>
+        <Navbar />
+        <div className="app-body">
+          <Switch>
+            <Route path="/about" exact component={About} />
+            <Route path="/compare" component={Compare} />
+            <Route path="/search" component={Search} />
+          </Switch>
+          <SpinningPokeball />
+        </div>
+      </BrowserRouter>
       <Footer />
     </div>
   );

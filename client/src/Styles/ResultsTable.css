@@ -1,0 +1,12 @@
+.results-card-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.results-card {
+  background: coral;
+  min-width: 100px;
+  margin: 20px;
+  padding: 10px;
+}

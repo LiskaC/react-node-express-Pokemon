@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../Styles/ResultsTable.css';
 
 export default class ResultsTable extends Component {
   constructor(props) {
