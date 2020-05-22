@@ -18,8 +18,8 @@ function App() {
           <div className="app-body">
             <Switch>
               <Route path="/about" exact component={About} />
-              <Route path="/search" component={Search} />
               <Route path="/compare" component={Compare} />
+              <Route path="/search" component={Search} />
             </Switch>
             <SpinningPokeball />
           </div>

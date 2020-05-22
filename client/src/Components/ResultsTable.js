@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class ComparisonResultsTable extends Component {
+export default class ResultsTable extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -8,35 +8,24 @@ export default class ComparisonResultsTable extends Component {
     }
   };
 
-  //tomorrow edit here 
-  /*
-  getData = number => {
-    let url =
-      (process.env.REACT_APP_API_URL || "http://localhost:5000") +
-      `/api/stories`;
-    if (number)
-      url =
-        (process.env.REACT_APP_API_URL || "http://localhost:5000") +
-        `/api/stories/${number}`;
-    axios.get(url).then(res => {
-      this.setState({
-        resData: res.data
-      });
-    });
-  };
-
-  componentDidMount() {
-    this.getData()
-  };
-  */
+  //take data from searchResults prop and render in list
 
   render() {
     return (
-      <div className="comparison-results-table">
-        <ul>
-          <li>thing one</li>
-        </ul>
+      <div className="results-card-group">
+
+        {this.props.searchResults.map((result, i) => {
+          return (
+            <div className="results-card" key={i}>
+              <h4>{result.name}</h4>
+              <h5>{result.type}</h5>
+              <h5>{result.total}</h5>
+            </div>
+          )
+        })}
+
       </div>
+
     )
   }
 };

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Card from './Card';
-import ComparisonResultsTable from './ResultsTable';
+import ResultsTable from './ResultsTable';
 
 //could not declare these variables inside the class Component - why?
 const Message = ({ onSubmit, onTextInput, pokemonNumber }) => <div className="compare-text">
@@ -19,7 +19,6 @@ const Message = ({ onSubmit, onTextInput, pokemonNumber }) => <div className="co
 </div>
 //onsubmit
 
-const results = <ComparisonResultsTable />;
 
 export default class Compare extends Component {
   constructor(props) {
@@ -33,10 +32,8 @@ export default class Compare extends Component {
   handleOnSubmit = async (e) => {
     e.preventDefault();
 
-
-
     const searchNumber = this.state.pokemonNumber;
-    let url = "http://localhost:5000/express_backend/"
+    const url = "http://localhost:5000/express_backend/"
 
     const inputResponse = await fetch(url + `${searchNumber}`);
 
@@ -46,11 +43,7 @@ export default class Compare extends Component {
         this.setState({
           searchResults: res
         });
-
-        console.log(this.state.searchResults)
       });
-    console.log(this.state.searchResults)
-
 
     //then response.json() etc as below
     /*
@@ -81,8 +74,9 @@ export default class Compare extends Component {
             onSubmit={this.handleOnSubmit}
             onTextInput={this.handleUserInput}
             pokemonNumber={this.state.pokemonNumber} />}
-          resultsTable={results}
         />
+        <ResultsTable
+          searchResults={this.state.searchResults} />
       </div>
     );
   }
