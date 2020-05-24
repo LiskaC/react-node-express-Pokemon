@@ -43,16 +43,23 @@ export default class Search extends Component {
     const searchName = this.state.pokemonName;
     const url = "http://localhost:5000/express_backend/";
 
+
+    //one error is happening here : GET 500 internal error
     const inputResponse = await fetch(url + `${searchName}`);
 
+    console.log('point1');
     inputResponse.json()
       .then(res => {
+        //not entering into this function
         this.setState({
           searchResults: res
         });
         console.log(this.state.searchResults);
+
       });
-  }
+
+    setTimeout(() => console.log("point3"), 3000);
+  };
 
   render() {
     return (

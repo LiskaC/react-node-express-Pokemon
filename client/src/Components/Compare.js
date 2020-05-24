@@ -44,7 +44,7 @@ export default class Compare extends Component {
     e.preventDefault();
 
     const searchNumber = this.state.pokemonNumber;
-    const url = "http://localhost:5000/express_backend/"
+    const url = "http://localhost:5000/express_backend/";
 
     const inputResponse = await fetch(url + `${searchNumber}`);
 
