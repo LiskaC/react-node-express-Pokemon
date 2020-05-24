@@ -36,6 +36,10 @@ export default class Compare extends Component {
     }
   };
 
+  handleUserInput = (e) => {
+    this.setState({ pokemonNumber: e.target.value })
+  };
+
   handleOnSubmit = async (e) => {
     e.preventDefault();
 
@@ -51,10 +55,6 @@ export default class Compare extends Component {
           searchResults: res
         });
       });
-  };
-
-  handleUserInput = (e) => {
-    this.setState({ pokemonNumber: e.target.value })
   };
 
   render() {
