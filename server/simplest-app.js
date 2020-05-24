@@ -17,12 +17,12 @@ const nerds = require('nerds');
 
 
 // this returns all the details for the Pokemon
-const allPokeDeets = (num) => { return nerds.resolve('Pokemon', num).asArray(); };
+const allPokeDeets = num => { return nerds.resolve('Pokemon', num).asArray(); };
 //console.log(allPokeDeets(1));
 
 
 // this returns a given number of Pokemon
-const somePokeDeets = (num) => {
+const somePokeDeets = num => {
   let result = nerds.resolve('Pokemon', num).include(['name', 'type', 'total']).asArray();
   return result;
 };
@@ -30,7 +30,7 @@ const somePokeDeets = (num) => {
 
 
 // this sorts the returned array for any number of random Pokemon by AWESOMENESS
-const sorted = (num) => {
+const sorted = num => {
   let pokeSlice = somePokeDeets(num).slice(0);
   return pokeSlice.sort((a, b) => b.total - a.total);
 }
@@ -38,7 +38,7 @@ console.log('Pokemon sorted by awesomeness:', sorted(6));
 
 
 //this finds the index of a Pokemon in the database, when its name is input as the string
-const oneMonIndex = (str) => {
+const oneMonIndex = str => {
   //this is to have a static array of objects to work on 
   // (otherwise the DB keeps scrambling responses and i returns a different pokemon each time it's called)
   let fullPokeSlice = allPokeDeets(151).slice(0);
