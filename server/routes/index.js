@@ -14,16 +14,20 @@ app.listen(port, () => console.log(`listening on port ${port}`));
 
 //in response to frontend input request
 
-app.get('/express_backend/:searchNumber', (req, res, next) => {
+app.get('/search_number/:query', (req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
-  const response = sorted(req.params.searchNumber);
+  const response = sorted(req.params.query);
 
   res.send(response)
 })
 
-app.get('/express_backend/:searchName', (req, res, next) => {
+app.get('/search_name/:query', (req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
-  const response = oneMonIndex(req.params.searchName);
+  const response = oneMonIndex(req.params.query);
+  console.log("this is response", response);
+  /* oneMonIndex(req.params.searchName).then(results => {
+     console.log("response: ", results);
+   })*/
 
   res.send(response)
-})
+});
