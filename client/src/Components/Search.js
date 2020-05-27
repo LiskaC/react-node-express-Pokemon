@@ -44,16 +44,10 @@ export default class Search extends Component {
     const url = "http://localhost:5000/search_name/";
 
 
-    //one error is happening here (line 48) : GET 500 internal error
     const inputResponse = await fetch(url + `${searchName}`);
-
-    console.log('point1');
 
     inputResponse.json()
       .then(res => {
-        //not entering into this function
-        //second error here : search:1 Uncaught (in promise) SyntaxError: 
-        //Unexpected token < in JSON at position 0
         this.setState({
           searchResults: res
         });
