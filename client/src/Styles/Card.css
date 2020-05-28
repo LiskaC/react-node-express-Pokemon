@@ -1,13 +1,12 @@
 .display-card {
   position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 30px;
-  margin-bottom: auto;
+  margin: 30px auto 30px auto;
   padding: 20px;
-  width: 60%;
-  border-radius: 2%;
+  width: 40%;
+  border-radius: 5px;
   background-color: rgb(255, 255, 206);
+  border: 1px solid white;
+  box-shadow: 5px 5px 10px darkred;
 }
 
 .display-card:hover {

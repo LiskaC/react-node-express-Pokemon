@@ -12,7 +12,12 @@ body {
 }
 
 .app-body {
+  background-color: firebrick;
   display: flex;
   height: 100%;
   /* can't put in padding because button breaks*/
+}
+
+h4 {
+ text-decoration: underline;
 }

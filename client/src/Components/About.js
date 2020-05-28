@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SpinningPokeball from './Pokeball';
 import Card from './Card';
+import '../Styles/About.css';
 
 const message = <p>This is a website about Pokemon</p>;
 

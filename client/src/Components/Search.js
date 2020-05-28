@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import '../Styles/Button.css';
-
+import SpinningPokeball from './Pokeball';
 import Card from './Card';
+import ResultsTable from './ResultsTable';
+import '../Styles/Search.css'
+import '../Styles/Button.css';
 
 const Message = ({ onTextInput, onSubmit, pokemonName }) =>
   <div className="card-contents">
@@ -27,9 +29,18 @@ export default class Search extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      loading: false,
       pokemonName: "",
       searchResults: []
     }
+  };
+
+
+  componentDidMount() {
+    this.setState({ loading: true });
+    setTimeout(() => {
+      this.setState({ loading: false });
+    }, 1500)
   };
 
   handleUserInput = (e) => {
@@ -58,12 +69,23 @@ export default class Search extends Component {
   };
 
   render() {
+    let spinningLoad;
+    if (this.state.loading) {
+      return spinningLoad = <SpinningPokeball />;
+    }
+
     return (
-      <Card cardText={<Message
-        onTextInput={this.handleUserInput}
-        onSubmit={this.handleOnSubmit}
-        pokemonName={this.state.pokemonName} />}
-      />
+      <div className="search-body">
+
+        {spinningLoad}
+        <Card cardText={<Message
+          onTextInput={this.handleUserInput}
+          onSubmit={this.handleOnSubmit}
+          pokemonName={this.state.pokemonName} />}
+        />
+
+        <ResultsTable searchResults={this.state.searchResults} />
+      </div>
     )
   }
 }

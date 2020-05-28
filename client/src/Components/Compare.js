@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import '../Styles/Compare.css'
 import Card from './Card';
 import ResultsTable from './ResultsTable';
+import SpinningPokeball from './Pokeball';
+import '../Styles/Compare.css'
 
 //could not declare these variables inside the class Component - why?
 const Message = ({ onSubmit, onTextInput, pokemonNumber }) => <div className="compare-text">
@@ -31,9 +32,17 @@ export default class Compare extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      loading: false,
       pokemonNumber: 0,
       searchResults: []
     }
+  };
+
+  componentDidMount() {
+    this.setState({ loading: true });
+    setTimeout(() => {
+      this.setState({ loading: false });
+    }, 1500)
   };
 
   handleUserInput = (e) => {
@@ -58,8 +67,15 @@ export default class Compare extends Component {
   };
 
   render() {
+    let spinningLoad;
+    if (this.state.loading) {
+      return spinningLoad = <SpinningPokeball />;
+    }
+
     return (
       <div className="compare-body">
+
+        {spinningLoad}
         <Card
           cardText={<Message
             onSubmit={this.handleOnSubmit}

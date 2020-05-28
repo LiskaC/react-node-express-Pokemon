@@ -5,8 +5,11 @@
 }
 
 .results-card {
-  background: coral;
+  background-color: rgb(255, 255, 206);
   min-width: 100px;
   margin: 20px;
-  padding: 10px;
+  padding: 10px 40px;
+  border-radius: 5px;
+  border: 1px solid white;
+  box-shadow: 5px 5px 10px darkred;
 }

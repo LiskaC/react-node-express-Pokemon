@@ -1,0 +1,2 @@
+ResultsTable.js: how do I only render the elements if the results value exists?
+Compare.js: the button is messing with me - help!
