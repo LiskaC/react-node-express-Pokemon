@@ -3,6 +3,7 @@
   margin: 30px auto 30px auto;
   padding: 20px;
   width: 40%;
+  min-width: 300px;
   border-radius: 5px;
   background-color: rgb(255, 255, 206);
   border: 1px solid white;

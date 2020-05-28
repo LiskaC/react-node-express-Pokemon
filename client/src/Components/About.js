@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import SpinningPokeball from './Pokeball';
 import Card from './Card';
+import AllPokemon from '../Images/all-pokemon.png';
 import '../Styles/About.css';
 
-const message = <p>This is a website about Pokemon</p>;
+const message = <div className="aboutMessage">
+  <p>This is a website about Pokemon</p>
+  <img className="all-pokemon" src={AllPokemon} alt="all-pokemon" ></img>
+</div>
 
 export default class About extends Component {
   constructor(props) {

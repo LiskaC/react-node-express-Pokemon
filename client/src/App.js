@@ -22,8 +22,9 @@ function App() {
           </Switch>
           <SpinningPokeball />
         </div>
+
+        <Footer />
       </BrowserRouter>
-      <Footer />
     </div>
   );
 }

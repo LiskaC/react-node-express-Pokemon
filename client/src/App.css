@@ -8,14 +8,12 @@ body {
 .App {
   height: 100%;
   text-align: center;
-  position: relative;
+  background-color: firebrick;
 }
 
 .app-body {
-  background-color: firebrick;
+  height: -webkit-fill-available;
   display: flex;
-  height: 100%;
-  /* can't put in padding because button breaks*/
 }
 
 h4 {

@@ -6,22 +6,18 @@ import '../Styles/Compare.css'
 
 //could not declare these variables inside the class Component - why?
 const Message = ({ onSubmit, onTextInput, pokemonNumber }) => <div className="compare-text">
-  <p>Get me a random group of</p>
+  <p>Get me a random group of {pokemonNumber} Pokemon</p>
 
   <form onSubmit={onSubmit}>
-    <label className="label">
+    <label>
       <input
         type="number"
         name="number-of-pokemon"
         onChange={onTextInput}
         value={pokemonNumber} />
-      <br></br>
-      1st Gen Pokemon, sorted in order of AWESOMENESS
-      <br></br>
     </label>
-
     <div className="button">
-      <input type="submit" value="GO!" />
+      <input type="submit" value={`Go!`} />
     </div>
   </form>
 </div>
