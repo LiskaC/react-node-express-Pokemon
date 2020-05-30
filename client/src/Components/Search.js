@@ -35,7 +35,7 @@ export default class Search extends Component {
     }
   };
 
-
+  //loading spinning pokeball
   componentDidMount() {
     this.setState({ loading: true });
     setTimeout(() => {
@@ -43,10 +43,14 @@ export default class Search extends Component {
     }, 1500)
   };
 
+
+
   handleUserInput = (e) => {
     this.setState({ pokemonName: e.target.value })
     console.log(this.state.pokemonName);
   };
+
+
 
   handleOnSubmit = async (e) => {
     e.preventDefault();
@@ -67,6 +71,39 @@ export default class Search extends Component {
       })
       .catch(err => console.log(err));
   };
+
+
+  ///////////////////
+
+
+  handleUserInputTypeAhead = async (e) => {
+    this.setState({ pokemonName: e.target.value })
+
+    const pokemon = [];
+    const endpoint = "http://localhost:5000/search_string"
+
+    const response = await fetch(endpoint);
+    response.json()
+      .then(data => pokemon.push(...data));
+
+
+    const findmatches = (stringToMatch, pokemon) => {
+      stringToMatch = this.state.pokemonName;
+
+      return pokemon.filter(pokemon => {
+        const regex = new RegExp(stringToMatch, 'gi');
+        /*
+        result = pokemon.name.match(regex);
+          this.setState({
+            searchResults: result
+          });*/
+        return pokemon.name.match(regex);
+      })
+    }
+    findmatches('Pon')
+  }
+
+  ///////////////
 
   render() {
     let spinningLoad;
