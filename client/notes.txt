@@ -4,4 +4,4 @@ and two app.jses etc. gah.
 ResultsTable.js: I return the 'no result found' to the frontend?
 Compare/Search.js: the button is messing with me - help! Why only registering on top half?
 Backend: simple app: how to search with a regex?
-implementing Type Ahead in react
+implementing Type Ahead in react 
