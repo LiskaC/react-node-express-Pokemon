@@ -1,3 +1,6 @@
+need to sort out my package jsons/nodemodules etc - accidentally one in client and one in highest level folder
+and two app.jses etc. gah.
+
 ResultsTable.js: I return the 'no result found' to the frontend?
 Compare/Search.js: the button is messing with me - help! Why only registering on top half?
 Backend: simple app: how to search with a regex?
