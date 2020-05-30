@@ -1,3 +1,26 @@
 .search-body {
   width: 100%;
 } 
+
+.name-input {
+  height: 20px;
+  text-align: center;
+  font-size: inherit;
+}
+
+.submit-button {
+  -webkit-appearance: media-slider;
+  background: red;
+  margin: 10px auto;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  }
+
+  .submit-button:hover {
+    background: rgb(172, 1, 1);
+  }
+  
+  .submit-button:active {
+    background: rgb(119, 1, 1);
+  }

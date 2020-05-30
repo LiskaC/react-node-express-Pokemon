@@ -1,2 +1,4 @@
-ResultsTable.js: how do I only render the elements if the results value exists?
-Compare.js: the button is messing with me - help!
+ResultsTable.js: I return the 'no result found' to the frontend?
+Compare/Search.js: the button is messing with me - help! Why only registering on top half?
+Backend: simple app: how to search with a regex?
+implementing Type Ahead in react

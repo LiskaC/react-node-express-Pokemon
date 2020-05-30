@@ -14,10 +14,11 @@ const Message = ({ onSubmit, onTextInput, pokemonNumber }) => <div className="co
         type="number"
         name="number-of-pokemon"
         onChange={onTextInput}
-        value={pokemonNumber} />
+        value={pokemonNumber}
+        className="number-input" />
     </label>
     <div className="button">
-      <input type="submit" value={`Go!`} />
+      <input type="submit" value={`Go!`} className="submit-button" />
     </div>
   </form>
 </div>

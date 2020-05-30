@@ -3,7 +3,6 @@ import SpinningPokeball from './Pokeball';
 import Card from './Card';
 import ResultsTable from './ResultsTable';
 import '../Styles/Search.css'
-import '../Styles/Button.css';
 
 const Message = ({ onTextInput, onSubmit, pokemonName }) =>
   <div className="card-contents">
@@ -16,10 +15,11 @@ const Message = ({ onTextInput, onSubmit, pokemonName }) =>
           name="name-of-pokemon"
           placeholder="Pokemon Name"
           onChange={onTextInput}
-          value={pokemonName} />
+          value={pokemonName}
+          className="name-input" />
       </label>
-      <div className="button">
-        <input type="submit" value={`I choose you!`} />
+      <div className="submit-button-div">
+        <input type="submit" value={`I choose you!`} className="submit-button" />
       </div>
     </form>
   </div>
