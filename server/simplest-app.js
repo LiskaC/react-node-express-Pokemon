@@ -33,13 +33,13 @@ const sorted = num => {
 
 
 //this finds the index of a Pokemon in the database, when its name is input as the string
-const oneMonIndex = str => {
-  //this is to have a static array of objects to work on 
-  // (otherwise the DB keeps scrambling responses and i returns a different pokemon each time it's called)
-  console.log("oneMonIndex string", str);
+const oneMon = str => {
+  console.log("oneMon string", str);
 
+  //const regex = new RegExp(str, 'i');
+  //console.log(regex);
   const result = allPokeDeets(151).filter(pokemon => {
-    if (pokemon.name === str) {
+    if (pokemon.name == str) {
       return true;
     }
   })
@@ -51,4 +51,4 @@ const oneMonIndex = str => {
 
 server.listen(3005);
 
-module.exports = { sorted, oneMonIndex }
+module.exports = { sorted, oneMon, allPokeDeets }
