@@ -5,11 +5,6 @@ const server = http.createServer((req, res) => {
   res.end();
 });
 
-//this is just to test out node
-
-const chalk = require('chalk');
-
-
 // getting stuck in to npm nerds
 const nerds = require('nerds');
 
