@@ -1,3 +1,7 @@
+server bin files?
+
+footer
+
 Compare.js - declaring constants inside vs outside components
 
 is there a way to write all this spinning/loading just once? 
@@ -5,5 +9,3 @@ have also tried to writing into components, not sure which way to go.
 perhaps with set timeout?
 
 Nav bar hooks - how to do it?
-
-how do I pass info from server to client?

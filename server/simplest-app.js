@@ -34,7 +34,7 @@ const oneMon = str => {
   //const regex = new RegExp(str, 'i');
   //console.log(regex);
   const result = allPokeDeets(151).filter(pokemon => {
-    if (pokemon.name == str) {
+    if (pokemon.name === str) {
       return true;
     }
   })
