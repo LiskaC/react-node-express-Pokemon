@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
-    "heroku-postbuild": "npm install"
+    "start": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
@@ -17,9 +16,5 @@
   "devDependencies": {
     "nodemon": "^2.0.3"
   },
-  "description": "",
-  "engines": {
-    "npm": "6.11.3",
-    "node": "11.2.0"
-  }
+  "description": ""
 }
