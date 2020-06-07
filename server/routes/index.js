@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const { sorted, oneMon, allPokeDeets } = require("../simplest-app");
 
 router.get('/search_number/:query', (req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
