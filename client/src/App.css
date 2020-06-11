@@ -6,13 +6,12 @@ body {
 }
 
 .App {
-  height: 100%;
   text-align: center;
   background-color: firebrick;
+  min-height: 100%;
 }
 
 .app-body {
-  height: -webkit-fill-available;
   display: flex;
 }
 
