@@ -1,5 +1,13 @@
-server bin files?
+server.js 
+//can I use simply "/" with second param authRoutes and it's different from queryRoutes? 
 
+Server:
+do I need a view engine? 
+
+auth-routes.js
+// Type ahead endpoint - not working, what's wrong
+
+Client:
 footer
 
 Compare.js - declaring constants inside vs outside components

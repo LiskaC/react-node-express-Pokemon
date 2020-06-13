@@ -22,7 +22,10 @@ app.get('/', (req, res) => {
 });
 
 
-const index = require("./routes/index");
-app.use("/", index);
+const queryRoutes = require("./routes/query-routes");
+app.use("/", queryRoutes);
+
+const authRoutes = require("./routes/auth-routes");
+app.use("/auth", authRoutes); //can I use simply "/" with second param authRoutes and it's different from queryRoutes? 
 
 module.exports = app;
