@@ -1,4 +1,8 @@
-deploy to heroku - do I have to npm run build before redeploying?
+//heroku run bash  - blocked by network (Error: connect ETIMEDOUT 50.19.103.36:5000)
+^ use to find index.html in heroku directory. Perhaps it isn't being created in client/build since:
+    Error: ENOENT: no such file or directory, stat '/app/client/build/index.html'
+
+deploy to heroku - do I have to npm run build before redeploying after change?
 
 server.js 
 //can I use simply "/" with second param authRoutes and it's different from queryRoutes? 
