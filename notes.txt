@@ -1,3 +1,5 @@
+deploy to heroku - do I have to npm run build before redeploying?
+
 server.js 
 //can I use simply "/" with second param authRoutes and it's different from queryRoutes? 
 
