@@ -1,14 +1,21 @@
+DEPLOYING TO HEROKU
 //heroku run bash  - blocked by network (Error: connect ETIMEDOUT 50.19.103.36:5000)
 ^ use to find index.html in heroku directory. Perhaps it isn't being created in client/build since:
     Error: ENOENT: no such file or directory, stat '/app/client/build/index.html'
 
+ISSUE: no build/index.html found in the app
+    1) search inside heroku for where/if this file exists
+    2) package.json contains     "heroku-postbuild": "npm install"  in 'scripts' - is this creating the build file when heroku builds (apparentlt successfully) or do i NEED SOMETHING ELSE TO DO THAT.
+
+
 deploy to heroku - do I have to npm run build before redeploying after change?
+-------------------------------
 
 server.js 
 //can I use simply "/" with second param authRoutes and it's different from queryRoutes? 
 
 Server:
-do I need a view engine? 
+do I need a
 
 auth-routes.js
 // Type ahead endpoint - not working, what's wrong
