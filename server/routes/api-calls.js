@@ -41,7 +41,7 @@ const oneMon = str => {
   if (result.length > 0) {
 
     return result;
-  } else { return { "message": "Not found" } }
+  } else { return [] }
 };
 
 server.listen(3005);

@@ -9,7 +9,8 @@ export default class Login extends Component {
     }
   }
 
-  // handleFormSubmit //write this
+  // handleFormSubmit //write this -> in the handler call the api endpoint
+  // const inputResponse = await post(url + `${searchNumber}`); fetch-> visible in URL . with post it is not visible
 
   // handleChange //write this
 

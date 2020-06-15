@@ -4,7 +4,8 @@ const router = express.Router();
 const passport = require('passport');
 
 router.get('/login', (req, res, next) => {
-  res.render("this is the login") // not working waaaaaaah
+  //get req.params and get all parameters from frontend and respond with value (as res.json)
+  res.send("this is the login") // not working waaaaaaah
 })
 
 router.get('/logout', (req, res, next) => {

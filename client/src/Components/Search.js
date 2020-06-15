@@ -4,7 +4,7 @@ import Card from './Card';
 import ResultsTable from './ResultsTable';
 import '../Styles/Search.css'
 
-const Message = ({ onTextInput, onSubmit, pokemonName }) =>
+const Message = ({ onTextInput, onSubmit, pokemonName, error }) =>
   <div className="card-contents">
     <p>Show all stats for:</p>
 
@@ -21,6 +21,7 @@ const Message = ({ onTextInput, onSubmit, pokemonName }) =>
       <div className="submit-button-div">
         <input type="submit" value={`I choose you!`} className="submit-button" />
       </div>
+      <label>{error}</label>
     </form>
   </div>
 
@@ -31,7 +32,8 @@ export default class Search extends Component {
     this.state = {
       loading: false,
       pokemonName: "",
-      searchResults: []
+      searchResults: [],
+      error: ""
     }
   };
 
@@ -63,11 +65,17 @@ export default class Search extends Component {
 
     inputResponse.json()
       .then(res => {
-        this.setState({
-          searchResults: res
-        });
-        console.log(this.state.searchResults);
-
+        if (res.length === 0) {
+          this.setState({
+            error: "Pokemon not found",
+            searchResults: []
+          });
+        } else {
+          this.setState({
+            error: "",
+            searchResults: res
+          });
+        }
       })
       .catch(err => console.log(err));
   };
@@ -80,7 +88,7 @@ export default class Search extends Component {
     this.setState({ pokemonName: e.target.value })
 
     const pokemon = [];
-    const endpoint = "http://localhost:5000/search_string"
+    const endpoint = "/search_string"
 
     const response = await fetch(endpoint);
     response.json()
@@ -118,7 +126,8 @@ export default class Search extends Component {
         <Card cardText={<Message
           onTextInput={this.handleUserInput}
           onSubmit={this.handleOnSubmit}
-          pokemonName={this.state.pokemonName} />}
+          pokemonName={this.state.pokemonName}
+          error={this.state.error} />}
         />
 
         <ResultsTable searchResults={this.state.searchResults} />
