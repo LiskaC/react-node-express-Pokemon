@@ -14,11 +14,13 @@ app.use(
   })
 );
 
-app.use(express.static(path.join(__dirname, 'build')));
+const buildFolder = path.join(__dirname, '../client/build');
+
+app.use(express.static(buildFolder));
 
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));  //going to the right place?
+  res.sendFile(path.join(buildFolder, 'index.html'));  //going to the right place?
 }); //I moved this from client to server and back... still Error: ENOENT: no such file or directory, stat '/app/server/build/index.html'
 
 
