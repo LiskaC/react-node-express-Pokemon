@@ -56,7 +56,7 @@ export default class Search extends Component {
     e.preventDefault();
 
     const searchName = this.state.pokemonName;
-    const url = "http://localhost:5000/search_name/";
+    const url = "/search_name/";
 
 
     const inputResponse = await fetch(url + `${searchName}`);
