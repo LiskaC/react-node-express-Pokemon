@@ -19,7 +19,7 @@ app.use(express.static(path.join(__dirname, 'build')));
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));  //going to the right place?
-});
+}); //I moved this from client to server and back... still Error: ENOENT: no such file or directory, stat '/app/server/build/index.html'
 
 
 const queryRoutes = require("./routes/query-routes");
