@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
 import SpinningPokeball from './Pokeball';
 import Card from './Card';
-import AllPokemon from '../Images/all-pokemon.png';
-import '../Styles/About.css';
-
-const message = <div className="aboutMessage">
-  <p>This is a website about Pokemon</p>
-  <img className="all-pokemon" src={AllPokemon} alt="all-pokemon" ></img>
-</div>
+import HomeCardMessage from './HomeCardMessage'
+import '../Styles/Home.css';
 
 export default class Home extends Component {
   constructor(props) {
@@ -33,7 +28,7 @@ export default class Home extends Component {
 
     return (
       <div className="card-contents">
-        <Card cardText={message} />
+        <Card cardText={<HomeCardMessage />} />
         {spinningLoad}
       </div>
     )
