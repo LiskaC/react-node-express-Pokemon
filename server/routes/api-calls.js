@@ -13,7 +13,7 @@ const nerds = require('nerds');
 const allPokeDeets = num => { return nerds.resolve('Pokemon', num).asArray(); };
 
 
-// this returns a given number of Pokemon
+// this returns a given number of Pokemon -> currently not in use
 const somePokeDeets = num => {
   let result = nerds.resolve('Pokemon', num).include(['name', 'type', 'total']).asArray();
   return result;
@@ -22,7 +22,7 @@ const somePokeDeets = num => {
 
 // this sorts the returned array for any number of random Pokemon by AWESOMENESS
 const sorted = num => {
-  let pokeSlice = somePokeDeets(num).slice(0);
+  let pokeSlice = allPokeDeets(num).slice(0);
   return pokeSlice.sort((a, b) => b.total - a.total);
 }
 

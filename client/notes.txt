@@ -1,2 +1,0 @@
-Backend: simple app: how to search with a regex?
-implementing Type Ahead in react 
