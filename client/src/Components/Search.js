@@ -67,7 +67,7 @@ export default class Search extends Component {
       .then(res => {
         if (res.length === 0) {
           this.setState({
-            error: "Pokemon not found",
+            error: "Pokemon not found (check capitalisation)",
             searchResults: []
           });
         } else {
