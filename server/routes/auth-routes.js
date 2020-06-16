@@ -5,7 +5,7 @@ const passport = require('passport');
 
 router.get('/login', (req, res, next) => {
   //get req.params and get all parameters from frontend and respond with value (as res.json)
-  res.send("this is the login") // not working waaaaaaah
+  res.send("this is the login")
 })
 
 router.get('/logout', (req, res, next) => {

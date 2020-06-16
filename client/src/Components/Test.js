@@ -5,6 +5,7 @@ import SpinningPokeball from './Pokeball';
 import CompareCardMessage from './CompareCardMessage';
 import '../Styles/Compare.css'
 
+
 export default class Compare extends Component {
   constructor(props) {
     super(props);

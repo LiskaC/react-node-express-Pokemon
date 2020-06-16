@@ -2,29 +2,8 @@ import React, { Component } from 'react';
 import SpinningPokeball from './Pokeball';
 import Card from './Card';
 import ResultsTable from './ResultsTable';
+import SearchCardMessage from './SearchCardMessage';
 import '../Styles/Search.css'
-
-const Message = ({ onTextInput, onSubmit, pokemonName, error }) =>
-  <div className="card-contents">
-    <p>Show all stats for:</p>
-
-    <form onSubmit={onSubmit}>
-      <label>
-        <input
-          type="text"
-          name="name-of-pokemon"
-          placeholder="Pokemon Name"
-          onChange={onTextInput}
-          value={pokemonName}
-          className="name-input" />
-      </label>
-      <div className="submit-button-div">
-        <input type="submit" value={`I choose you!`} className="submit-button" />
-      </div>
-      <label>{error}</label>
-    </form>
-  </div>
-
 
 export default class Search extends Component {
   constructor(props) {
@@ -81,7 +60,7 @@ export default class Search extends Component {
   };
 
 
-  ///////////////////
+  /////////////////// handleUserInputTypeAhead currently not functioning, see notes.txt
 
 
   handleUserInputTypeAhead = async (e) => {
@@ -123,7 +102,7 @@ export default class Search extends Component {
       <div className="search-body">
 
         {spinningLoad}
-        <Card cardText={<Message
+        <Card cardText={<SearchCardMessage
           onTextInput={this.handleUserInput}
           onSubmit={this.handleOnSubmit}
           pokemonName={this.state.pokemonName}

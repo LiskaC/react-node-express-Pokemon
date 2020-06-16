@@ -9,7 +9,7 @@ const message = <div className="aboutMessage">
   <img className="all-pokemon" src={AllPokemon} alt="all-pokemon" ></img>
 </div>
 
-export default class About extends Component {
+export default class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
