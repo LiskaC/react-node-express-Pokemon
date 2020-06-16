@@ -67,7 +67,7 @@ export default class Search extends Component {
       .then(res => {
         if (res.length === 0) {
           this.setState({
-            error: "Pokemon not found (check capitalisation)",
+            error: "Pokemon not found. Sure it's 1st Gen? ",
             searchResults: []
           });
         } else {

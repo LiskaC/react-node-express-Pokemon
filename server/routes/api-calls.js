@@ -26,15 +26,20 @@ const sorted = num => {
   return pokeSlice.sort((a, b) => b.total - a.total);
 }
 
+//this makes sure the string passed to the api has an uppercase first letter, so that the search bar input is not case sensitive
+const uppercaseFirstLetter = str => {
+  if (typeof str === "string") {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  } return null;
+}
+
 
 //this finds the index of a Pokemon in the database, when its name is input as the string
 const oneMon = str => {
-  console.log("oneMon string", str);
+  let formattedStr = uppercaseFirstLetter(str);
 
-  //const regex = new RegExp(str, 'i');
-  //console.log(regex);
   const result = allPokeDeets(151).filter(pokemon => {
-    if (pokemon.name === str) {
+    if (pokemon.name === formattedStr) {
       return true;
     }
   })
