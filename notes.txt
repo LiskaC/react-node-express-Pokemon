@@ -1,9 +1,18 @@
-
-
 for client login read:
 fetch('https://example.com/profile', { method: 'POST', // or 'PUT' headers: { 'Content-Type': 'application/json', }, body: JSON.stringify(data), })
 https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
 https://stackoverflow.com/questions/29775797/fetch-post-json-data
+
+OAuth2 systems:
+- How do I call database-setup (from config) in server.js?
+- Install Passport.js
+- Do Google setup
+- Create Database for Users : set up Schemas, Models, 
+- Include AuthCheck in mounting Component? or this.State.isLoggedIn?
+
+CREATE README.md
+
+
 
 Server:
 do I need a

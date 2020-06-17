@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import AllPokemon from '../Images/all-pokemon.png';
-import '../Styles/Link.css';
+import AllPokemon from '../../Images/all-pokemon.png';
+import '../../Styles/Link.css';
 
 export default class HomeCardMessage extends Component {
 

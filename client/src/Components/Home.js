@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import SpinningPokeball from './Pokeball';
 import Card from './Card';
-import HomeCardMessage from './HomeCardMessage'
+import HomeCardMessage from './Texts/HomeCardMessage'
 import '../Styles/Home.css';
 
 export default class Home extends Component {

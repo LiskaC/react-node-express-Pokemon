@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import SpinningPokeball from './Pokeball';
 import Card from './Card';
 import ResultsTable from './ResultsTable';
-import SearchCardMessage from './SearchCardMessage';
+import SearchCardMessage from './Texts/SearchCardMessage';
 import '../Styles/Search.css'
 
 export default class Search extends Component {

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Card from './Card';
 import ResultsTable from './ResultsTable';
 import SpinningPokeball from './Pokeball';
-import CompareCardMessage from './CompareCardMessage';
+import CompareCardMessage from './Texts/CompareCardMessage';
 import '../Styles/Compare.css'
 
 
